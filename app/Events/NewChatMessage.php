@@ -33,10 +33,6 @@ class NewChatMessage implements ShouldBroadcast
      * @return \Illuminate\Broadcasting\Channel|array
      */
 
-    public function broadcastAs() {
-        return 'message.new';
-    }
-    
     public function broadcastOn()
     {
         return new PrivateChannel('chat.'. $this->chatMessage->chat_room_id );
