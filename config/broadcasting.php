@@ -37,10 +37,10 @@ return [
             'app_id' => env('PUSHER_APP_ID'),
             'options' => [
                 'cluster'   => env('PUSHER_APP_CLUSTER'),
-                'encrypted' => false,
+                'encrypted' => env('WEBSOCKET_ENCRYPTION'),
                 'host'      => env('MIX_PUSHER_HOST'),
                 'port'      => env('MIX_PUSHER_PORT'),
-                'scheme'    => 'http'
+                'scheme'    => env('WEBSOCKET_SCHEME')
             ],
         ],
 
