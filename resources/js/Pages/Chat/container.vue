@@ -56,7 +56,7 @@ export default {
         let vm = this;
         this.getMessages();
         window.Echo.private("chat."+ this.currentRoom.id)
-        .listen('.message.new', e => {
+        .listen('NewChatMessage', e => {
           vm.getMessages();
         });
       }
