@@ -1,0 +1,2 @@
+vendor/bin/sail php artisan config:clear
+vendor/bin/sail php artisan config:cache
